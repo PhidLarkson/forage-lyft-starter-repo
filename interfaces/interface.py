@@ -29,3 +29,10 @@ class Engine(Serviceable):
     def needs_service(self) -> bool:
         # Calculate the mileage since the last service and check if it exceeds the service interval
         raise NotImplementedError("Subclasses must implement the 'needs_service' method.")
+
+class Tires(Serviceable):
+    def __init__(self, tire_wear: list):
+        self.tire_wear = tire_wear
+
+    def needs_service(self) -> bool:
+        raise NotImplementedError("Subclasses must implement the 'needs_service' method.")
