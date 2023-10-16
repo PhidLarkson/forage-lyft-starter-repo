@@ -1,4 +1,5 @@
 from interfaces.interface import *
+from datetime import date
 
 class NubbinBattery(Battery):
     def __init__(self, last_service_date: date, current_date: date):
